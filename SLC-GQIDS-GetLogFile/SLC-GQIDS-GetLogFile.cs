@@ -56,9 +56,28 @@ namespace SLCGQIDSGetLogFile
 
         public GQIPage GetNextPage(GetNextPageInputArgs args)
         {
-            var logFileRequest = new GetLogTextFileStringContentRequestMessage(_fileName) { LogFileType = Skyline.DataMiner.Net.Info.LogFileType.Core };
-            logFileRequest.DataMinerID = _dmaId != 0 ? _dmaId : -1;
-            logFileRequest.HostingDataMinerID = _dmaId != 0 ? _dmaId : -1;
+            int dmaId = _dmaId;
+
+            if (dmaId == 0)
+            {
+                // Try to resolve the DMA ID by looking up an element with the log file name
+                try
+                {
+                    var getElementMsg = new GetElementByNameMessage(_fileName);
+                    var elementResponse = _dms.SendMessage(getElementMsg) as ElementInfoEventMessage;
+
+                    if (elementResponse != null)
+                    {
+                        dmaId = elementResponse.HostingAgentID;
+                    }
+                }
+                catch
+                {
+                    dmaId = -1;
+                }
+            }
+
+            var logFileRequest = new GetLogTextFileStringContentRequestMessage(_fileName) { LogFileType = Skyline.DataMiner.Net.Info.LogFileType.Core, DataMinerID = dmaId, HostingDataMinerID = dmaId };
 
             var logFileResponse = _dms.SendMessage(logFileRequest) as GetLogTextFileStringContentResponseMessage;
 
