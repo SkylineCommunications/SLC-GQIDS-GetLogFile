@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="SLC-GQIDS-GetLogFile/SLC-GQIDS-GetLogFile.csproj" />
+  <Project Path="SLC-GQIDS-GetLogFilePackage/SLC-GQIDS-GetLogFilePackage.csproj" />
+</Solution>
