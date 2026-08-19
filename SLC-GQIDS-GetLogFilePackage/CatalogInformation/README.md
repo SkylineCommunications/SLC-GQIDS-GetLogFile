@@ -16,8 +16,6 @@ The data source supports both **element log files** and **DataMiner system log f
 ## Prerequisites
 
 - DataMiner version **10.4.0.0 – 14003** or higher (minimum required version).
-- The GQI ad hoc data source feature must be available on your DataMiner System.
-- When retrieving a log file from a remote DMA, ensure the **DMA ID** input argument is provided.
 
 ## Technical Reference
 
