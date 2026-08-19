@@ -59,7 +59,7 @@ documentation_url:
 #   The name is required; max 256 characters.
 #   The email and url are optional, and should be in valid email/URL formats.
 owners:
-  - name: 'MFA'
+  - name: 'Mathijs Favorel'
     email: 
     url: 
 
@@ -72,7 +72,6 @@ owners:
 tags:
   - GQI
   - Log Files
-  - Ad Hoc Data Source
   - DataMiner
 
 # [Optional]

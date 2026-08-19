@@ -6,10 +6,6 @@
 
 The data source supports both **element log files** and **DataMiner system log files**. When targeting a log file on a remote DataMiner Agent (i.e. a DMA other than the one you are connected to), supply the **DMA ID** input argument to route the request correctly.
 
-This data source also integrates with the DataMiner AI assistant (Copilot). To enable log-file queries through natural language, add a line such as the following to your general assistant context:
-
-> *Log files can be retrieved through the Get Log File custom data source.*
-
 ## Key Features
 
 - **Line-by-line output** — returns each log line as an individual row with a `Line Number` and `Data` column, making it straightforward to filter, sort, or aggregate log content in a GQI query.
