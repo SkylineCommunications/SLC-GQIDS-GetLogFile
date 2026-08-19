@@ -33,13 +33,13 @@ id: 465c4070-f3f0-41cd-a1ec-49387fd3fc3f
 #   Max length: 100 characters.
 #   Cannot contain newlines.
 #   Cannot contain leading or trailing whitespace characters.
-title: SLC-GQIDS-GetLogFile
+title: Get Log File
 
 # [Optional]
 # General information about the Catalog item.
 #   Max length: 100,000 characters
 # Currently not shown in the Catalog UI but will be supported in the near future.
-short_description: 
+short_description: GQI ad hoc data source that retrieves DataMiner log file contents line by line for use in dashboards and low-code apps.
 
 # [Optional]
 # A valid URL that points to the source code.
@@ -70,7 +70,10 @@ owners:
 #   Cannot contain newlines.
 #   Cannot contain leading or trailing whitespace characters.
 tags:
-  - 
+  - GQI
+  - Log Files
+  - Ad Hoc Data Source
+  - DataMiner
 
 # [Optional]
 # The ID of the vendor.
