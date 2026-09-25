@@ -24,7 +24,7 @@ The data source supports both **element log files** and **DataMiner system log f
 | Argument | Type | Required | Description |
 |---|---|---|---|
 | Log File Name | String | Yes | The name of the log file to be retrieved (i.e., an element name or a system log file name). |
-| DMA ID | Int | No | The DataMiner ID of the Agent that hosts the log file. Required when targeting a remote DMA or a system log file on a specific Agent. Leave empty for element log files when auto-resolution is sufficient. |
+| DMA ID | Int | No | The DataMiner ID of the Agent that hosts the log file. Required when targeting a remote DMA or a system log file on a specific Agent.<br>Leave empty for element log files when auto-resolution is sufficient. |
 
 ### Output Columns
 
